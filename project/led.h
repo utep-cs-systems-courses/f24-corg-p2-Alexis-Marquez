@@ -20,7 +20,7 @@ void led_init();/* initialize LEDs */
 
 void led_update();/* update leds */
 
-
+void play_scale(int secondCount);
 
 // these are boolean flags
 

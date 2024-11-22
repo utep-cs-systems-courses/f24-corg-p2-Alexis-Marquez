@@ -63,6 +63,5 @@ switch_interrupt_handler()
   } else if (!(p2val & SW4)) {  // Check if Switch 4 is pressed
     CURRSTATE = 4;
   }
-  switch_state_changed = 1;
-  led_update(); 
+  switch_state_changed = 1; 
 }
