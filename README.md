@@ -1,29 +1,12 @@
 # Lab 2: Blinky-Buzzy Toy
+## How to compile
+To compile simply use the make command inside of the project folder.
 
-For your second project, your task is to use the MSP430
-Microcontroller and your creativity to design a toy. Each MSP430 board
-is equipped with buttons, LED's, a speaker, and 4 button switches
-Utilizing these features and your knowledge of I/O, develop a
-program to turn the board into a toy.
+## How to run and use
 
-This toy should at minimum:
-
-* generate sounds,
-* dynamically change the LEDs that are illuminated, both brighly and dimmly,
-* implement a state machine to maintain the state of the toy,
-* and use the four buttons on the expansion board (P2.0-3) to transition the state machine.
-
-**Furthermore, at least one of the functions to transition the state machine must be written by you in assembly language.**
-
-## Getting Started 
-
-Inside this repository you will find two directories:
-1. The 'demos' directory contains sample programs for you to review and learn from. These example programs are a great starting point in understanding how to program the MSP430 microcontroller. See the readme in the demo directory on how to compile and run the demo programs.
-2. The 'project' directory should contain the source code for your toy.
-
-## What Should Be In Your Repo
-
-Your project will be graded on the following items:
-* Source code for your toy (only .c, .s and .h files).
-* A README containing a description of your toy, how to compile it, how to run it, and how to use it.
-* A Makefile with appropriate rules to build and clean your toy.
+To run and use the toy simply run the command make load with an msp430 microcontroller connected.
+The default state is state 4. Here is a description of the 4 different states and how to transition between them:
+* State 1: Links blink once per second, speaker plays a note from the C minor scale each second and resets to middle C after 8 notes.
+* State 2: Links blink twice per second, speaker plays a note from the C major scale each half second and resets to middle C after 8 notes.
+* State 3: Links blink three times per second, speaker plays a random note from the C minor scale at random intervals and resets after a random number of notes between 1 and 4.
+* State 4: Links blink fourt times per second, speaker plays a random note from the C major scale at random intervals and resets after a random number of notes.
